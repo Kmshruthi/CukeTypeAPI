@@ -1,0 +1,28 @@
+{
+    "default": {
+        "tags":"@inventory",
+        "require": [
+            "src/test/step-definitions/*.ts",
+            "src/hooks/hooks.ts",
+            "src/support/*.ts"            
+        ],
+        "paths": [
+            "src/test/features"
+        ],
+        "formatOptions": {
+            "snippetInterface": "async-await"
+        },
+        "format": [
+            "summary",
+            "progress-bar",
+            "html:test-results/cucumber-report.html",
+            "json:test-results/cucumber-report.json",
+            "rerun:@rerun.txt"
+        ],
+        "dryRun": false,
+        "requireModule": [
+            "ts-node/register"
+        ],
+        "parallel": 1
+    }
+}
